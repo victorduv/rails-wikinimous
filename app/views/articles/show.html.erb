@@ -1,0 +1,16 @@
+<div class="container">
+  <article>
+    <div class="d-flex col-sm-8">
+      <h1><%= @article.title %>
+        <%= link_to edit_article_path do %>
+          <i class="fa-solid fa-pen-to-square"></i>
+        <% end %>
+        <%= link_to article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fa-solid fa-trash-can"></i>
+        <% end %>
+      </h1>
+    </div>
+
+    <p><%= @article.content %></p>
+  </article>
+</div>
